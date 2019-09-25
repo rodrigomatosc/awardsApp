@@ -7,6 +7,9 @@ import {
   ContainerButtons,
   TextButtons,
   Button,
+  HeaderUsuario,
+  Avatar,
+  TextHeaderUsuario,
 } from './style';
 import api from '../../services/api';
 
@@ -21,7 +24,7 @@ class Game extends Component {
     }).isRequired,
   };
 
-  state = { user: null, loading: false, text: '' };
+  state = { user: {}, loading: false, text: '' };
 
   async componentDidMount() {
     const { navigation } = this.props;
@@ -87,9 +90,17 @@ class Game extends Component {
   }
 
   render() {
-    const { text } = this.state;
+    const { text, user } = this.state;
     return (
       <Container>
+        <HeaderUsuario>
+          <Avatar
+            source={{
+              uri: user.avatar,
+            }}
+          />
+          <TextHeaderUsuario>{user.name}</TextHeaderUsuario>
+        </HeaderUsuario>
         <ContainerInput>
           <InputTextNumber
             placeholder="Vezes que deseja inserir o registro."

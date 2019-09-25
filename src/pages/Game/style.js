@@ -42,3 +42,24 @@ export const TextButtons = styled.Text`
   font-size: 20px;
   color: #ffff;
 `;
+
+export const HeaderUsuario = styled.View`
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  border-bottom-color: #eee;
+  border-bottom-width: 4px;
+  padding: 10px 10px;
+`;
+
+export const TextHeaderUsuario = styled.Text`
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+`;
+
+export const Avatar = styled.Image`
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+`;
